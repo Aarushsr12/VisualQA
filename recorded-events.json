@@ -1,0 +1,182 @@
+[
+  {
+    "action": "navigate",
+    "url": "https://www.zomato.com/chhindwara/restaurants?order-online=1&delivery_subzone=37369",
+    "pageTitle": "Order food online in Sant Shri Asharamji Gurukul,Chhindwara, food delivery in Sant Shri Asharamji Gurukul,Chhindwara",
+    "timestamp": 1731996180886
+  },
+  {
+    "action": "scroll",
+    "coordinates": {
+      "x": 209,
+      "y": 377
+    },
+    "timestamp": 1731996183522
+  },
+  {
+    "action": "scroll",
+    "coordinates": {
+      "x": 0,
+      "y": 0
+    },
+    "timestamp": 1731996183523
+  },
+  {
+    "action": "scroll",
+    "coordinates": {
+      "x": 209,
+      "y": 377
+    },
+    "timestamp": 1731996183671
+  },
+  {
+    "action": "scroll",
+    "coordinates": {
+      "x": 0,
+      "y": 0
+    },
+    "timestamp": 1731996183684
+  },
+  {
+    "action": "scroll",
+    "coordinates": {
+      "x": 0,
+      "y": 139
+    },
+    "timestamp": 1731996191597
+  },
+  {
+    "action": "scroll",
+    "coordinates": {
+      "x": 0,
+      "y": 0
+    },
+    "timestamp": 1731996191612
+  },
+  {
+    "action": "scroll",
+    "coordinates": {
+      "x": 0,
+      "y": 167
+    },
+    "timestamp": 1731996191697
+  },
+  {
+    "action": "scroll",
+    "coordinates": {
+      "x": 0,
+      "y": 0
+    },
+    "timestamp": 1731996192145
+  },
+  {
+    "action": "scroll",
+    "coordinates": {
+      "x": 404,
+      "y": 305
+    },
+    "timestamp": 1731996192847
+  },
+  {
+    "action": "scroll",
+    "coordinates": {
+      "x": 0,
+      "y": 0
+    },
+    "timestamp": 1731996192848
+  },
+  {
+    "action": "scroll",
+    "coordinates": {
+      "x": 403,
+      "y": 304
+    },
+    "timestamp": 1731996192943
+  },
+  {
+    "action": "scroll",
+    "coordinates": {
+      "x": 0,
+      "y": 0
+    },
+    "timestamp": 1731996192962
+  },
+  {
+    "action": "scroll",
+    "coordinates": {
+      "x": 0,
+      "y": 234
+    },
+    "timestamp": 1731996195546
+  },
+  {
+    "action": "scroll",
+    "coordinates": {
+      "x": 0,
+      "y": 0
+    },
+    "timestamp": 1731996195625
+  },
+  {
+    "action": "scroll",
+    "coordinates": {
+      "x": 0,
+      "y": 369
+    },
+    "timestamp": 1731996195647
+  },
+  {
+    "action": "scroll",
+    "coordinates": {
+      "x": 0,
+      "y": 0
+    },
+    "timestamp": 1731996195662
+  },
+  {
+    "action": "scroll",
+    "coordinates": {
+      "x": 0,
+      "y": 392
+    },
+    "timestamp": 1731996195748
+  },
+  {
+    "action": "scroll",
+    "coordinates": {
+      "x": 0,
+      "y": 308
+    },
+    "timestamp": 1731996196423
+  },
+  {
+    "action": "scroll",
+    "coordinates": {
+      "x": 0,
+      "y": 0
+    },
+    "timestamp": 1731996196468
+  },
+  {
+    "action": "scroll",
+    "coordinates": {
+      "x": 0,
+      "y": 293
+    },
+    "timestamp": 1731996196524
+  },
+  {
+    "action": "scroll",
+    "coordinates": {
+      "x": 0,
+      "y": 0
+    },
+    "timestamp": 1731996196969
+  },
+  {
+    "action": "navigate",
+    "url": "https://www.zomato.com/chhindwara/roof-5-chhindwara-locality/order?contextual_menu_params=eyJkaXNoX3NlYXJjaCI6eyJ0aXRsZSI6IkJlc3QgaW4gQmlyeWFuaSIsImRpc2hfaWRzIjpbIjMwMzA4Il0sImN1aXNpbmVfaWRzIjpbXX19",
+    "pageTitle": "Roof 5, Chhindwara Locality order online - Zomato",
+    "timestamp": 1731996200221
+  }
+]
