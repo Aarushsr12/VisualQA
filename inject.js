@@ -7,50 +7,76 @@ import { record } from "rrweb";
   }
 
   window.hasRecordingInitialized = true;
+
   let recordedEvents = [];
   let lastScrollPosition = { x: 0, y: 0 };
   const scrollThreshold = 50;
 
   console.log("Starting rrweb recording...");
 
-  // Generate a locator (CSS selector or XPath)
   function getLocator(element) {
     if (!element) return null;
     if (element.id) return `#${element.id}`;
-    if (element.className) {
-      return `.${element.className.split(" ").join(".")}`;
-    }
+    if (element.className) return `.${element.className.split(" ").join(".")}`;
     return element.tagName.toLowerCase();
   }
 
-  // Determine if scroll should be recorded
   function shouldRecordScroll(newPosition) {
     const distance = Math.abs(newPosition.y - lastScrollPosition.y);
     if (distance > scrollThreshold) {
-      lastScrollPosition = newPosition; // Update last position
+      lastScrollPosition = newPosition;
       return true;
     }
     return false;
   }
 
-  // Transform raw rrweb events into custom format
+  function logNavigationEvent(url, title) {
+    const navigationEvent = {
+      action: "navigate",
+      url: url || window.location.href,
+      pageTitle: title || document.title,
+      timestamp: Date.now(),
+    };
+    recordedEvents.push(navigationEvent);
+    console.log("Captured navigation event:", navigationEvent);
+    saveEvents();
+  }
+
+  function saveEvents() {
+    chrome.storage.local.set({ recordedEvents }, () => {
+      console.log("Events saved to chrome.storage.local:", recordedEvents);
+    });
+  }
+
+  function loadEvents(callback) {
+    chrome.storage.local.get(["recordedEvents"], (result) => {
+      const savedEvents = result.recordedEvents || [];
+      recordedEvents = savedEvents;
+      console.log("Loaded events from chrome.storage.local:", savedEvents);
+      if (callback) callback(savedEvents);
+    });
+  }
+
   function transformEvent(event) {
     try {
       switch (event.type) {
-        case 2: // Mouse interaction (click)
+        case 2: // Mouse click
           const targetElement = rrweb.record.mirror.getNode(event.data?.id);
           if (!targetElement) return null;
 
           return {
             action: "click",
             locator: getLocator(targetElement),
-            elementText: targetElement.innerText || null,
+            elementText: targetElement.innerText || "",
             coordinates: { x: event.data?.x || 0, y: event.data?.y || 0 },
             timestamp: event.timestamp,
           };
 
         case 3: // Scroll
-          const scrollCoordinates = { x: event.data?.x || 0, y: event.data?.y || 0 };
+          const scrollCoordinates = {
+            x: event.data?.x || 0,
+            y: event.data?.y || 0,
+          };
           if (shouldRecordScroll(scrollCoordinates)) {
             return {
               action: "scroll",
@@ -72,12 +98,8 @@ import { record } from "rrweb";
           };
 
         case 4: // Navigation
-          return {
-            action: "navigate",
-            url: event.data?.href || window.location.href,
-            pageTitle: document.title || "",
-            timestamp: event.timestamp,
-          };
+          logNavigationEvent(event.data?.href, document.title);
+          return null;
 
         default:
           return null;
@@ -88,33 +110,26 @@ import { record } from "rrweb";
     }
   }
 
-  // Listen for hash changes and history changes
-  function captureNavigationEvent() {
-    const navigationEvent = {
-      action: "navigate",
-      url: window.location.href,
-      pageTitle: document.title,
+  // Listen for keyboard input events to capture text manually
+  document.addEventListener("input", (e) => {
+    const inputEvent = {
+      action: "input",
+      locator: getLocator(e.target),
+      value: e.target.value || "",
       timestamp: Date.now(),
     };
-    recordedEvents.push(navigationEvent);
-    console.log("Captured navigation event:", navigationEvent);
-  }
+    recordedEvents.push(inputEvent);
+    console.log("Captured input event:", inputEvent);
+    saveEvents();
+  });
 
-  // Add event listeners for SPA navigation
-  window.addEventListener("hashchange", captureNavigationEvent);
-  window.addEventListener("popstate", captureNavigationEvent);
-
-  // Start recording with rrweb
   record({
     emit(event) {
-      try {
-        const customEvent = transformEvent(event);
-        if (customEvent) {
-          recordedEvents.push(customEvent);
-          console.log("Captured and transformed event:", customEvent);
-        }
-      } catch (error) {
-        console.error("Error handling emitted event:", error, event);
+      const customEvent = transformEvent(event);
+      if (customEvent) {
+        recordedEvents.push(customEvent);
+        console.log("Captured and transformed event:", customEvent);
+        saveEvents();
       }
     },
     maskAllInputs: false,
@@ -122,13 +137,16 @@ import { record } from "rrweb";
 
   console.log("Recording started...");
 
-  // Stop recording and download JSON file
+  window.addEventListener("beforeunload", saveEvents);
+
+  loadEvents(() => {
+    logNavigationEvent(window.location.href, document.title);
+  });
+
   chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
     if (message.action === "stop-recording") {
-      // Ensure navigation events are captured before stopping
-      captureNavigationEvent();
+      saveEvents();
 
-      // Download the JSON file
       const blob = new Blob([JSON.stringify(recordedEvents, null, 2)], {
         type: "application/json",
       });
@@ -141,6 +159,11 @@ import { record } from "rrweb";
       URL.revokeObjectURL(url);
       console.log("Recording stopped. JSON file downloaded.");
       sendResponse({ success: true });
+
+      // Clear recorded events after download
+      chrome.storage.local.remove(["recordedEvents"], () => {
+        console.log("Cleared events from chrome.storage.local.");
+      });
     }
   });
 })();

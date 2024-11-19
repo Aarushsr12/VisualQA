@@ -3,7 +3,7 @@ const webdriver = require("selenium-webdriver");
 const AWS = require("aws-sdk");
 
 // AWS Device Farm Project ARN
-const PROJECT_ARN = "arn:aws:devicefarm:us-west-2:206233454061:testgrid-project:047765ca-4504-47f8-88fa-9812c0183b7d";
+const PROJECT_ARN = "arn:aws:devicefarm:us-west-2:206233454061:testgrid-project:d4f7c141-0ba5-40ea-83f8-30ae3f580670";
 
 // Initialize AWS SDK for Device Farm
 const devicefarm = new AWS.DeviceFarm({ region: "us-west-2" });
@@ -63,6 +63,11 @@ async function runTest(urlString, recordedEvents) {
         case "input":
           console.log(`Typing in locator: ${event.locator}, value: ${event.value}`);
           const inputElement = await driver.findElement(webdriver.By.css(event.locator));
+          
+          // Clear the input field before entering the value
+          await inputElement.clear();
+          
+          // Enter the recorded value
           await inputElement.sendKeys(event.value);
           break;
 

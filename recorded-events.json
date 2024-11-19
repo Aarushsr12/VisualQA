@@ -1,182 +1,274 @@
 [
   {
     "action": "navigate",
-    "url": "https://www.zomato.com/chhindwara/restaurants?order-online=1&delivery_subzone=37369",
-    "pageTitle": "Order food online in Sant Shri Asharamji Gurukul,Chhindwara, food delivery in Sant Shri Asharamji Gurukul,Chhindwara",
-    "timestamp": 1731996180886
-  },
-  {
-    "action": "scroll",
-    "coordinates": {
-      "x": 209,
-      "y": 377
-    },
-    "timestamp": 1731996183522
-  },
-  {
-    "action": "scroll",
-    "coordinates": {
-      "x": 0,
-      "y": 0
-    },
-    "timestamp": 1731996183523
-  },
-  {
-    "action": "scroll",
-    "coordinates": {
-      "x": 209,
-      "y": 377
-    },
-    "timestamp": 1731996183671
-  },
-  {
-    "action": "scroll",
-    "coordinates": {
-      "x": 0,
-      "y": 0
-    },
-    "timestamp": 1731996183684
-  },
-  {
-    "action": "scroll",
-    "coordinates": {
-      "x": 0,
-      "y": 139
-    },
-    "timestamp": 1731996191597
-  },
-  {
-    "action": "scroll",
-    "coordinates": {
-      "x": 0,
-      "y": 0
-    },
-    "timestamp": 1731996191612
-  },
-  {
-    "action": "scroll",
-    "coordinates": {
-      "x": 0,
-      "y": 167
-    },
-    "timestamp": 1731996191697
-  },
-  {
-    "action": "scroll",
-    "coordinates": {
-      "x": 0,
-      "y": 0
-    },
-    "timestamp": 1731996192145
-  },
-  {
-    "action": "scroll",
-    "coordinates": {
-      "x": 404,
-      "y": 305
-    },
-    "timestamp": 1731996192847
-  },
-  {
-    "action": "scroll",
-    "coordinates": {
-      "x": 0,
-      "y": 0
-    },
-    "timestamp": 1731996192848
-  },
-  {
-    "action": "scroll",
-    "coordinates": {
-      "x": 403,
-      "y": 304
-    },
-    "timestamp": 1731996192943
-  },
-  {
-    "action": "scroll",
-    "coordinates": {
-      "x": 0,
-      "y": 0
-    },
-    "timestamp": 1731996192962
-  },
-  {
-    "action": "scroll",
-    "coordinates": {
-      "x": 0,
-      "y": 234
-    },
-    "timestamp": 1731996195546
-  },
-  {
-    "action": "scroll",
-    "coordinates": {
-      "x": 0,
-      "y": 0
-    },
-    "timestamp": 1731996195625
-  },
-  {
-    "action": "scroll",
-    "coordinates": {
-      "x": 0,
-      "y": 369
-    },
-    "timestamp": 1731996195647
-  },
-  {
-    "action": "scroll",
-    "coordinates": {
-      "x": 0,
-      "y": 0
-    },
-    "timestamp": 1731996195662
-  },
-  {
-    "action": "scroll",
-    "coordinates": {
-      "x": 0,
-      "y": 392
-    },
-    "timestamp": 1731996195748
-  },
-  {
-    "action": "scroll",
-    "coordinates": {
-      "x": 0,
-      "y": 308
-    },
-    "timestamp": 1731996196423
-  },
-  {
-    "action": "scroll",
-    "coordinates": {
-      "x": 0,
-      "y": 0
-    },
-    "timestamp": 1731996196468
-  },
-  {
-    "action": "scroll",
-    "coordinates": {
-      "x": 0,
-      "y": 293
-    },
-    "timestamp": 1731996196524
-  },
-  {
-    "action": "scroll",
-    "coordinates": {
-      "x": 0,
-      "y": 0
-    },
-    "timestamp": 1731996196969
+    "pageTitle": "Test Login | Practice Test Automation",
+    "timestamp": 1732006566426,
+    "url": "https://practicetestautomation.com/practice-test-login/"
   },
   {
     "action": "navigate",
-    "url": "https://www.zomato.com/chhindwara/roof-5-chhindwara-locality/order?contextual_menu_params=eyJkaXNoX3NlYXJjaCI6eyJ0aXRsZSI6IkJlc3QgaW4gQmlyeWFuaSIsImRpc2hfaWRzIjpbIjMwMzA4Il0sImN1aXNpbmVfaWRzIjpbXX19",
-    "pageTitle": "Roof 5, Chhindwara Locality order online - Zomato",
-    "timestamp": 1731996200221
+    "url": "https://practicetestautomation.com/practice-test-login/",
+    "pageTitle": "Test Login | Practice Test Automation",
+    "timestamp": 1732006566465
+  },
+  {
+    "action": "scroll",
+    "coordinates": {
+      "x": 0,
+      "y": 71
+    },
+    "timestamp": 1732006572743
+  },
+  {
+    "action": "scroll",
+    "coordinates": {
+      "x": 0,
+      "y": 142
+    },
+    "timestamp": 1732006573208
+  },
+  {
+    "action": "scroll",
+    "coordinates": {
+      "x": 0,
+      "y": 226
+    },
+    "timestamp": 1732006573672
+  },
+  {
+    "action": "scroll",
+    "coordinates": {
+      "x": 0,
+      "y": 285
+    },
+    "timestamp": 1732006573773
+  },
+  {
+    "action": "scroll",
+    "coordinates": {
+      "x": 0,
+      "y": 0
+    },
+    "timestamp": 1732006574506
+  },
+  {
+    "action": "scroll",
+    "coordinates": {
+      "x": 530,
+      "y": 223
+    },
+    "timestamp": 1732006574665
+  },
+  {
+    "action": "scroll",
+    "coordinates": {
+      "x": 0,
+      "y": 0
+    },
+    "timestamp": 1732006574666
+  },
+  {
+    "action": "scroll",
+    "coordinates": {
+      "x": 530,
+      "y": 223
+    },
+    "timestamp": 1732006574767
+  },
+  {
+    "action": "scroll",
+    "coordinates": {
+      "x": 0,
+      "y": 0
+    },
+    "timestamp": 1732006575008
+  },
+  {
+    "action": "scroll",
+    "coordinates": {
+      "x": 0,
+      "y": 335
+    },
+    "timestamp": 1732006583757
+  },
+  {
+    "action": "scroll",
+    "coordinates": {
+      "x": 0,
+      "y": 399
+    },
+    "timestamp": 1732006583857
+  },
+  {
+    "action": "scroll",
+    "coordinates": {
+      "x": 0,
+      "y": 499
+    },
+    "timestamp": 1732006583957
+  },
+  {
+    "action": "scroll",
+    "coordinates": {
+      "x": 0,
+      "y": 580
+    },
+    "timestamp": 1732006584389
+  },
+  {
+    "action": "scroll",
+    "coordinates": {
+      "x": 0,
+      "y": 415
+    },
+    "timestamp": 1732006584957
+  },
+  {
+    "action": "scroll",
+    "coordinates": {
+      "x": 0,
+      "y": 0
+    },
+    "timestamp": 1732006585700
+  },
+  {
+    "action": "input",
+    "locator": "#username",
+    "value": "s",
+    "timestamp": 1732006585701
+  },
+  {
+    "action": "input",
+    "locator": "#username",
+    "value": "st",
+    "timestamp": 1732006585981
+  },
+  {
+    "action": "input",
+    "locator": "#username",
+    "value": "stu",
+    "timestamp": 1732006586154
+  },
+  {
+    "action": "input",
+    "locator": "#username",
+    "value": "stud",
+    "timestamp": 1732006586334
+  },
+  {
+    "action": "input",
+    "locator": "#username",
+    "value": "stude",
+    "timestamp": 1732006586423
+  },
+  {
+    "action": "input",
+    "locator": "#username",
+    "value": "studen",
+    "timestamp": 1732006586535
+  },
+  {
+    "action": "input",
+    "locator": "#username",
+    "value": "student",
+    "timestamp": 1732006586712
+  },
+  {
+    "action": "scroll",
+    "coordinates": {
+      "x": 533,
+      "y": 292
+    },
+    "timestamp": 1732006587473
+  },
+  {
+    "action": "scroll",
+    "coordinates": {
+      "x": 0,
+      "y": 0
+    },
+    "timestamp": 1732006587475
+  },
+  {
+    "action": "scroll",
+    "coordinates": {
+      "x": 533,
+      "y": 292
+    },
+    "timestamp": 1732006587549
+  },
+  {
+    "action": "scroll",
+    "coordinates": {
+      "x": 0,
+      "y": 0
+    },
+    "timestamp": 1732006587746
+  },
+  {
+    "action": "input",
+    "locator": "#password",
+    "value": "p",
+    "timestamp": 1732006588432
+  },
+  {
+    "action": "input",
+    "locator": "#password",
+    "value": "pa",
+    "timestamp": 1732006588611
+  },
+  {
+    "action": "input",
+    "locator": "#password",
+    "value": "pas",
+    "timestamp": 1732006588834
+  },
+  {
+    "action": "input",
+    "locator": "#password",
+    "value": "pass",
+    "timestamp": 1732006589074
+  },
+  {
+    "action": "input",
+    "locator": "#password",
+    "value": "passw",
+    "timestamp": 1732006589399
+  },
+  {
+    "action": "input",
+    "locator": "#password",
+    "value": "passwo",
+    "timestamp": 1732006589581
+  },
+  {
+    "action": "input",
+    "locator": "#password",
+    "value": "passwor",
+    "timestamp": 1732006589725
+  },
+  {
+    "action": "input",
+    "locator": "#password",
+    "value": "password",
+    "timestamp": 1732006589912
+  },
+  {
+    "action": "input",
+    "locator": "#password",
+    "value": "password1",
+    "timestamp": 1732006590153
+  },
+  {
+    "action": "input",
+    "locator": "#password",
+    "value": "password12",
+    "timestamp": 1732006590484
+  },
+  {
+    "action": "input",
+    "locator": "#password",
+    "value": "password123",
+    "timestamp": 1732006590669
   }
 ]
