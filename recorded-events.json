@@ -1,47 +1,17 @@
 [
   {
     "action": "navigate",
-    "pageTitle": "Test Login | Practice Test Automation",
-    "timestamp": 1732006566426,
-    "url": "https://practicetestautomation.com/practice-test-login/"
-  },
-  {
-    "action": "navigate",
-    "url": "https://practicetestautomation.com/practice-test-login/",
-    "pageTitle": "Test Login | Practice Test Automation",
-    "timestamp": 1732006566465
+    "pageTitle": "Requestly - Best HTTP Interceptor & Mocking Tool for Web & Mobile Apps",
+    "timestamp": 1735905307301,
+    "url": "https://app.requestly.io/home"
   },
   {
     "action": "scroll",
     "coordinates": {
-      "x": 0,
-      "y": 71
+      "x": 659,
+      "y": 132
     },
-    "timestamp": 1732006572743
-  },
-  {
-    "action": "scroll",
-    "coordinates": {
-      "x": 0,
-      "y": 142
-    },
-    "timestamp": 1732006573208
-  },
-  {
-    "action": "scroll",
-    "coordinates": {
-      "x": 0,
-      "y": 226
-    },
-    "timestamp": 1732006573672
-  },
-  {
-    "action": "scroll",
-    "coordinates": {
-      "x": 0,
-      "y": 285
-    },
-    "timestamp": 1732006573773
+    "timestamp": 1735905317730
   },
   {
     "action": "scroll",
@@ -49,15 +19,7 @@
       "x": 0,
       "y": 0
     },
-    "timestamp": 1732006574506
-  },
-  {
-    "action": "scroll",
-    "coordinates": {
-      "x": 530,
-      "y": 223
-    },
-    "timestamp": 1732006574665
+    "timestamp": 1735905318045
   },
   {
     "action": "scroll",
@@ -65,15 +27,15 @@
       "x": 0,
       "y": 0
     },
-    "timestamp": 1732006574666
+    "timestamp": 1735905322294
   },
   {
     "action": "scroll",
     "coordinates": {
-      "x": 530,
-      "y": 223
+      "x": 0,
+      "y": 81
     },
-    "timestamp": 1732006574767
+    "timestamp": 1735905322987
   },
   {
     "action": "scroll",
@@ -81,47 +43,15 @@
       "x": 0,
       "y": 0
     },
-    "timestamp": 1732006575008
+    "timestamp": 1735905323294
   },
   {
     "action": "scroll",
     "coordinates": {
       "x": 0,
-      "y": 335
+      "y": 120
     },
-    "timestamp": 1732006583757
-  },
-  {
-    "action": "scroll",
-    "coordinates": {
-      "x": 0,
-      "y": 399
-    },
-    "timestamp": 1732006583857
-  },
-  {
-    "action": "scroll",
-    "coordinates": {
-      "x": 0,
-      "y": 499
-    },
-    "timestamp": 1732006583957
-  },
-  {
-    "action": "scroll",
-    "coordinates": {
-      "x": 0,
-      "y": 580
-    },
-    "timestamp": 1732006584389
-  },
-  {
-    "action": "scroll",
-    "coordinates": {
-      "x": 0,
-      "y": 415
-    },
-    "timestamp": 1732006584957
+    "timestamp": 1735905323669
   },
   {
     "action": "scroll",
@@ -129,57 +59,15 @@
       "x": 0,
       "y": 0
     },
-    "timestamp": 1732006585700
-  },
-  {
-    "action": "input",
-    "locator": "#username",
-    "value": "s",
-    "timestamp": 1732006585701
-  },
-  {
-    "action": "input",
-    "locator": "#username",
-    "value": "st",
-    "timestamp": 1732006585981
-  },
-  {
-    "action": "input",
-    "locator": "#username",
-    "value": "stu",
-    "timestamp": 1732006586154
-  },
-  {
-    "action": "input",
-    "locator": "#username",
-    "value": "stud",
-    "timestamp": 1732006586334
-  },
-  {
-    "action": "input",
-    "locator": "#username",
-    "value": "stude",
-    "timestamp": 1732006586423
-  },
-  {
-    "action": "input",
-    "locator": "#username",
-    "value": "studen",
-    "timestamp": 1732006586535
-  },
-  {
-    "action": "input",
-    "locator": "#username",
-    "value": "student",
-    "timestamp": 1732006586712
+    "timestamp": 1735905323794
   },
   {
     "action": "scroll",
     "coordinates": {
-      "x": 533,
-      "y": 292
+      "x": 0,
+      "y": 163.5
     },
-    "timestamp": 1732006587473
+    "timestamp": 1735905323871
   },
   {
     "action": "scroll",
@@ -187,15 +75,15 @@
       "x": 0,
       "y": 0
     },
-    "timestamp": 1732006587475
+    "timestamp": 1735905324294
   },
   {
     "action": "scroll",
     "coordinates": {
-      "x": 533,
-      "y": 292
+      "x": 674,
+      "y": 452
     },
-    "timestamp": 1732006587549
+    "timestamp": 1735905324620
   },
   {
     "action": "scroll",
@@ -203,72 +91,38 @@
       "x": 0,
       "y": 0
     },
-    "timestamp": 1732006587746
+    "timestamp": 1735905324794
   },
   {
-    "action": "input",
-    "locator": "#password",
-    "value": "p",
-    "timestamp": 1732006588432
+    "action": "scroll",
+    "coordinates": {
+      "x": 0,
+      "y": 176.5
+    },
+    "timestamp": 1735905334196
   },
   {
-    "action": "input",
-    "locator": "#password",
-    "value": "pa",
-    "timestamp": 1732006588611
+    "action": "scroll",
+    "coordinates": {
+      "x": 0,
+      "y": 0
+    },
+    "timestamp": 1735905334346
   },
   {
-    "action": "input",
-    "locator": "#password",
-    "value": "pas",
-    "timestamp": 1732006588834
+    "action": "scroll",
+    "coordinates": {
+      "x": 0,
+      "y": 222.5
+    },
+    "timestamp": 1735905334629
   },
   {
-    "action": "input",
-    "locator": "#password",
-    "value": "pass",
-    "timestamp": 1732006589074
-  },
-  {
-    "action": "input",
-    "locator": "#password",
-    "value": "passw",
-    "timestamp": 1732006589399
-  },
-  {
-    "action": "input",
-    "locator": "#password",
-    "value": "passwo",
-    "timestamp": 1732006589581
-  },
-  {
-    "action": "input",
-    "locator": "#password",
-    "value": "passwor",
-    "timestamp": 1732006589725
-  },
-  {
-    "action": "input",
-    "locator": "#password",
-    "value": "password",
-    "timestamp": 1732006589912
-  },
-  {
-    "action": "input",
-    "locator": "#password",
-    "value": "password1",
-    "timestamp": 1732006590153
-  },
-  {
-    "action": "input",
-    "locator": "#password",
-    "value": "password12",
-    "timestamp": 1732006590484
-  },
-  {
-    "action": "input",
-    "locator": "#password",
-    "value": "password123",
-    "timestamp": 1732006590669
+    "action": "scroll",
+    "coordinates": {
+      "x": 0,
+      "y": 0
+    },
+    "timestamp": 1735905334729
   }
 ]

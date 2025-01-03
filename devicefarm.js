@@ -1,5 +1,5 @@
 const fs = require("fs");
-const webdriver = require("selenium-webdriver");
+const webdriverio = require("webdriverio");
 const AWS = require("aws-sdk");
 
 // AWS Device Farm Project ARN
@@ -27,62 +27,64 @@ async function getTestGridUrl() {
 }
 
 async function runTest(urlString, recordedEvents) {
-  // Initialize WebDriver with the TestGrid URL
-  const driver = await new webdriver.Builder()
-    .usingServer(urlString)
-    .withCapabilities({ browserName: "chrome" })
-    .build();
+  const url = new URL(urlString);
+
+  // Initialize Webdriver.IO with the TestGrid URL
+  const browser = await webdriverio.remote({
+    logLevel: "trace",
+    hostname: url.host,
+    path: url.pathname,
+    protocol: "https",
+    port: 443,
+    connectionRetryTimeout: 180000,
+    capabilities: {
+      browserName: "chrome",
+      webSocketUrl: false,
+    },
+  });
 
   try {
-    console.log("Starting WebDriver session using TestGrid URL...");
-    const session = await driver.getSession();
-    console.log("New WebDriver session created:", session);
-
+    console.log("Starting Webdriver.IO session...");
     for (const event of recordedEvents) {
       console.log(`Executing event: ${JSON.stringify(event)}`);
 
       switch (event.action) {
         case "navigate":
           console.log(`Navigating to URL: ${event.url}`);
-          await driver.get(event.url); // Navigate to the URL
+          await browser.url(event.url);
           break;
 
         case "scroll":
           console.log(`Scrolling to coordinates: (${event.coordinates.x}, ${event.coordinates.y})`);
-          await driver.executeScript(
+          await browser.execute(
             `window.scrollTo(${event.coordinates.x}, ${event.coordinates.y});`
           );
           break;
 
         case "click":
           console.log(`Clicking on locator: ${event.locator}`);
-          const clickElement = await driver.findElement(webdriver.By.css(event.locator));
+          const clickElement = await browser.$(event.locator);
           await clickElement.click();
           break;
 
         case "input":
           console.log(`Typing in locator: ${event.locator}, value: ${event.value}`);
-          const inputElement = await driver.findElement(webdriver.By.css(event.locator));
-          
-          // Clear the input field before entering the value
-          await inputElement.clear();
-          
-          // Enter the recorded value
-          await inputElement.sendKeys(event.value);
+          const inputElement = await browser.$(event.locator);
+          await inputElement.clearValue();
+          await inputElement.setValue(event.value);
           break;
 
         default:
           console.log(`Unknown action: ${event.action}`);
       }
 
-      // Add delay to simulate user interaction
       await new Promise((resolve) => setTimeout(resolve, 1000));
     }
   } catch (error) {
-    console.error("Error during WebDriver session:", error);
+    console.error("Error during Webdriver.IO session:", error);
   } finally {
-    console.log("Ending WebDriver session...");
-    await driver.quit();
+    console.log("Ending Webdriver.IO session...");
+    await browser.deleteSession();
   }
 }
 

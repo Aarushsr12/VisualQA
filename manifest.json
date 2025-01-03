@@ -1,33 +1,26 @@
 {
     "manifest_version": 3,
     "name": "rrweb-recorder",
-    "description": "recording the events",
+    "description": "Record web page interactions using rrweb.",
     "version": "1.0",
     "permissions": ["activeTab", "scripting", "storage"],
     "host_permissions": ["<all_urls>"],
-    "action": {
-        "default_popup": "popup.html",
-        "default_icon": {
-            "16": "icon.png",
-            "48": "icon.png",
-            "128": "icon.png" 
-        }
-    },
     "background": {
-        "service_worker": "background.js",
-        "type": "module"
+      "service_worker": "background.js"
     },
-    "content_scripts": [
-        {
-            "matches": ["<all_urls>"], 
-            "js": ["dist/inject.bundle.js"],
-            "run_at": "document_idle"
-        }
-    ],
+    "action": {
+      "default_popup": "popup.html",
+      "default_icon": {
+        "16": "icon.png",
+        "48": "icon.png",
+        "128": "icon.png"
+      }
+    },
     "web_accessible_resources": [
-        {
-            "resources": ["libs/rrweb.min.js"],
-            "matches": ["<all_urls>"]
-        }
-  ]
-}
+      {
+        "resources": ["libs/rrweb.min.js"],
+        "matches": ["<all_urls>"]
+      }
+    ]
+  }
+  
