@@ -1,17 +1,97 @@
 [
   {
     "action": "navigate",
-    "pageTitle": "Requestly - Best HTTP Interceptor & Mocking Tool for Web & Mobile Apps",
-    "timestamp": 1735905307301,
-    "url": "https://app.requestly.io/home"
+    "pageTitle": "Bistro Bliss Restaurant",
+    "timestamp": 1735952225273,
+    "url": "http://landing-page-sample.s3-website.ap-south-1.amazonaws.com/"
   },
   {
     "action": "scroll",
     "coordinates": {
-      "x": 659,
-      "y": 132
+      "x": 0,
+      "y": 109
     },
-    "timestamp": 1735905317730
+    "timestamp": 1735952228450
+  },
+  {
+    "action": "scroll",
+    "coordinates": {
+      "x": 0,
+      "y": 267
+    },
+    "timestamp": 1735952228551
+  },
+  {
+    "action": "scroll",
+    "coordinates": {
+      "x": 0,
+      "y": 464
+    },
+    "timestamp": 1735952228652
+  },
+  {
+    "action": "scroll",
+    "coordinates": {
+      "x": 0,
+      "y": 592
+    },
+    "timestamp": 1735952228752
+  },
+  {
+    "action": "scroll",
+    "coordinates": {
+      "x": 0,
+      "y": 677
+    },
+    "timestamp": 1735952228853
+  },
+  {
+    "action": "scroll",
+    "coordinates": {
+      "x": 0,
+      "y": 745
+    },
+    "timestamp": 1735952229054
+  },
+  {
+    "action": "scroll",
+    "coordinates": {
+      "x": 0,
+      "y": 674
+    },
+    "timestamp": 1735952229155
+  },
+  {
+    "action": "scroll",
+    "coordinates": {
+      "x": 0,
+      "y": 509
+    },
+    "timestamp": 1735952229256
+  },
+  {
+    "action": "scroll",
+    "coordinates": {
+      "x": 0,
+      "y": 293
+    },
+    "timestamp": 1735952229358
+  },
+  {
+    "action": "scroll",
+    "coordinates": {
+      "x": 0,
+      "y": 140
+    },
+    "timestamp": 1735952229460
+  },
+  {
+    "action": "scroll",
+    "coordinates": {
+      "x": 0,
+      "y": 74
+    },
+    "timestamp": 1735952229561
   },
   {
     "action": "scroll",
@@ -19,7 +99,7 @@
       "x": 0,
       "y": 0
     },
-    "timestamp": 1735905318045
+    "timestamp": 1735952229576
   },
   {
     "action": "scroll",
@@ -27,31 +107,21 @@
       "x": 0,
       "y": 0
     },
-    "timestamp": 1735905322294
+    "timestamp": 1735952230765
+  },
+  {
+    "action": "navigate",
+    "pageTitle": "Bistro Bliss Restaurant",
+    "timestamp": 1735952230982,
+    "url": "http://landing-page-sample.s3-website.ap-south-1.amazonaws.com/pages/menu.html"
   },
   {
     "action": "scroll",
     "coordinates": {
       "x": 0,
-      "y": 81
+      "y": 98
     },
-    "timestamp": 1735905322987
-  },
-  {
-    "action": "scroll",
-    "coordinates": {
-      "x": 0,
-      "y": 0
-    },
-    "timestamp": 1735905323294
-  },
-  {
-    "action": "scroll",
-    "coordinates": {
-      "x": 0,
-      "y": 120
-    },
-    "timestamp": 1735905323669
+    "timestamp": 1735952232109
   },
   {
     "action": "scroll",
@@ -59,15 +129,95 @@
       "x": 0,
       "y": 0
     },
-    "timestamp": 1735905323794
+    "timestamp": 1735952232182
   },
   {
     "action": "scroll",
     "coordinates": {
       "x": 0,
-      "y": 163.5
+      "y": 221
     },
-    "timestamp": 1735905323871
+    "timestamp": 1735952232210
+  },
+  {
+    "action": "scroll",
+    "coordinates": {
+      "x": 0,
+      "y": 342
+    },
+    "timestamp": 1735952232312
+  },
+  {
+    "action": "scroll",
+    "coordinates": {
+      "x": 0,
+      "y": 418
+    },
+    "timestamp": 1735952232413
+  },
+  {
+    "action": "scroll",
+    "coordinates": {
+      "x": 0,
+      "y": 489
+    },
+    "timestamp": 1735952232617
+  },
+  {
+    "action": "scroll",
+    "coordinates": {
+      "x": 0,
+      "y": 545
+    },
+    "timestamp": 1735952233018
+  },
+  {
+    "action": "scroll",
+    "coordinates": {
+      "x": 0,
+      "y": 621
+    },
+    "timestamp": 1735952233118
+  },
+  {
+    "action": "scroll",
+    "coordinates": {
+      "x": 0,
+      "y": 735
+    },
+    "timestamp": 1735952233218
+  },
+  {
+    "action": "scroll",
+    "coordinates": {
+      "x": 0,
+      "y": 822
+    },
+    "timestamp": 1735952233318
+  },
+  {
+    "action": "scroll",
+    "coordinates": {
+      "x": 0,
+      "y": 903
+    },
+    "timestamp": 1735952233519
+  },
+  {
+    "action": "scroll",
+    "coordinates": {
+      "x": 0,
+      "y": 693
+    },
+    "timestamp": 1735952234358
+  },
+  {
+    "action": "scroll",
+    "coordinates": {
+      "x": 0,
+      "y": 127
+    },
+    "timestamp": 1735952234459
   },
   {
     "action": "scroll",
@@ -75,31 +225,15 @@
       "x": 0,
       "y": 0
     },
-    "timestamp": 1735905324294
+    "timestamp": 1735952234560
   },
   {
     "action": "scroll",
     "coordinates": {
-      "x": 674,
-      "y": 452
+      "x": 581,
+      "y": 335
     },
-    "timestamp": 1735905324620
-  },
-  {
-    "action": "scroll",
-    "coordinates": {
-      "x": 0,
-      "y": 0
-    },
-    "timestamp": 1735905324794
-  },
-  {
-    "action": "scroll",
-    "coordinates": {
-      "x": 0,
-      "y": 176.5
-    },
-    "timestamp": 1735905334196
+    "timestamp": 1735952236171
   },
   {
     "action": "scroll",
@@ -107,22 +241,6 @@
       "x": 0,
       "y": 0
     },
-    "timestamp": 1735905334346
-  },
-  {
-    "action": "scroll",
-    "coordinates": {
-      "x": 0,
-      "y": 222.5
-    },
-    "timestamp": 1735905334629
-  },
-  {
-    "action": "scroll",
-    "coordinates": {
-      "x": 0,
-      "y": 0
-    },
-    "timestamp": 1735905334729
+    "timestamp": 1735952236175
   }
 ]

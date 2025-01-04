@@ -1,4 +1,5 @@
 const fs = require("fs");
+const path = require("path");
 const webdriverio = require("webdriverio");
 const AWS = require("aws-sdk");
 
@@ -26,8 +27,30 @@ async function getTestGridUrl() {
   }
 }
 
+// Ensure folder exists
+function ensureFolderExists(folderPath) {
+  if (!fs.existsSync(folderPath)) {
+    fs.mkdirSync(folderPath, { recursive: true });
+  }
+}
+
+// Capture screenshot
+async function captureScreenshot(browser, folder, step) {
+  const screenshot = await browser.takeScreenshot();
+  const screenshotPath = path.join(folder, `step-${step}.png`);
+  fs.writeFileSync(screenshotPath, screenshot, "base64");
+  console.log(`Captured screenshot: ${screenshotPath}`);
+}
+
+const isBaseline = process.argv.includes("--baseline");
+
 async function runTest(urlString, recordedEvents) {
   const url = new URL(urlString);
+
+  // Set up the current screenshots folder
+  const folderType = isBaseline ? "baseline" : "current";
+  const screenshotFolder = path.join(__dirname, "screenshots", folderType);
+  ensureFolderExists(screenshotFolder);
 
   // Initialize Webdriver.IO with the TestGrid URL
   const browser = await webdriverio.remote({
@@ -45,6 +68,8 @@ async function runTest(urlString, recordedEvents) {
 
   try {
     console.log("Starting Webdriver.IO session...");
+    let step = 1; // Step counter for screenshots
+
     for (const event of recordedEvents) {
       console.log(`Executing event: ${JSON.stringify(event)}`);
 
@@ -78,6 +103,11 @@ async function runTest(urlString, recordedEvents) {
           console.log(`Unknown action: ${event.action}`);
       }
 
+      // Capture screenshot after each action
+      await captureScreenshot(browser, screenshotFolder, step);
+      step++;
+
+      // Optional delay to ensure stable screenshots
       await new Promise((resolve) => setTimeout(resolve, 1000));
     }
   } catch (error) {

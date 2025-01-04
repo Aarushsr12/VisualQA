@@ -38,7 +38,7 @@ const App: React.FC = () => {
 
   return (
     <div style={{ textAlign: "center", padding: "20px" }}>
-      <h1>Image Comparison App</h1>
+      <h1>Visual Regression testing</h1>
 
       <div>
         <input type="file" accept="image/*" onChange={(e) => handleImageUpload(e, "baseline")} />
@@ -66,7 +66,7 @@ const App: React.FC = () => {
         <div style={{ marginTop: "20px" }}>
           <h2>Comparison Results</h2>
           <p>Mismatch Percentage: {mismatchPercentage}%</p>
-          {diffImage && <img src={diffImage} alt="Diff" style={{ maxWidth: "300px", border: "1px solid #ddd" }} />}
+          {diffImage && <img src={diffImage} alt="Diff" style={{ maxWidth: "400px", border: "1px solid #ddd" }} />}
         </div>
       )}
     </div>
