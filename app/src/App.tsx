@@ -37,38 +37,35 @@ const App: React.FC = () => {
   };
 
   return (
-    <div style={{ textAlign: "center", padding: "20px" }}>
-      <h1>Visual Regression testing</h1>
+    <div className="dashboard">
+      <header className="dashboard-header">
+        <h1>Visual Regression Testing</h1>
+      </header>
 
-      <div>
-        <input type="file" accept="image/*" onChange={(e) => handleImageUpload(e, "baseline")} />
-        <label> Upload Baseline Image</label>
-      </div>
+      <main className="dashboard-content">
+        <section className="image-upload">
+          <div className="upload-box">
+            <input type="file" accept="image/*" onChange={(e) => handleImageUpload(e, "baseline")} />
+            <label>Upload Baseline Image</label>
+          </div>
 
-      <div>
-        <input type="file" accept="image/*" onChange={(e) => handleImageUpload(e, "current")} />
-        <label> Upload Current Image</label>
-      </div>
+          <div className="upload-box">
+            <input type="file" accept="image/*" onChange={(e) => handleImageUpload(e, "current")} />
+            <label>Upload Current Image</label>
+          </div>
+          <button onClick={handleCompare} className="compare-button">
+            Compare Images
+          </button>
+        </section>
 
-      <button
-        onClick={handleCompare}
-        style={{
-          padding: "10px 20px",
-          marginTop: "20px",
-          fontSize: "16px",
-          cursor: "pointer",
-        }}
-      >
-        Compare Images
-      </button>
-
-      {mismatchPercentage !== null && (
-        <div style={{ marginTop: "20px" }}>
-          <h2>Comparison Results</h2>
-          <p>Mismatch Percentage: {mismatchPercentage}%</p>
-          {diffImage && <img src={diffImage} alt="Diff" style={{ maxWidth: "400px", border: "1px solid #ddd" }} />}
-        </div>
-      )}
+        {mismatchPercentage !== null && (
+          <section className="results">
+            <h2>Comparison Results</h2>
+            <p><strong>Mismatch Percentage:</strong> {mismatchPercentage}%</p>
+            {diffImage && <img src={diffImage} alt="Diff" />}
+          </section>
+        )}
+      </main>
     </div>
   );
 };
