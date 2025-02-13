@@ -2,9 +2,10 @@ const fs = require("fs");
 const path = require("path");
 const webdriverio = require("webdriverio");
 const AWS = require("aws-sdk");
+require('dotenv').config();
 
 // AWS Device Farm Project ARN
-const PROJECT_ARN = "arn:aws:devicefarm:us-west-2:206233454061:testgrid-project:d4f7c141-0ba5-40ea-83f8-30ae3f580670";
+const PROJECT_ARN = process.env.PROJECT_ARN;
 
 // Initialize AWS SDK for Device Farm
 const devicefarm = new AWS.DeviceFarm({ region: "us-west-2" });
